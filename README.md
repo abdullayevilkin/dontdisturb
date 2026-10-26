@@ -9,7 +9,7 @@ auto-off timer. Native Android (Kotlin), no root required.
 - **Timer in the notification** – once enabled, an ongoing notification offers
   *15 min* / *1 hour* / *Turn off*. When a timer is running it shows a live
   countdown and DND switches off automatically when it ends.
-- **App screen** – more presets (5 min – 4 h), custom minutes, manual toggle.
+- **App screen** – a rotary knob for the auto-off timer (5 min – 4 h, 5 min steps), a Start button and a manual toggle.
 - Survives reboot / app update (running timer is re-armed).
 - English and Azerbaijani UI.
 

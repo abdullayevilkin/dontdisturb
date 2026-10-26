@@ -27,19 +27,15 @@
     <string name="btn_add_tile">Add tile to Quick Settings</string>
 
     <string name="timer_section">Auto-off timer</string>
-    <string name="preset_5m">5 min</string>
-    <string name="preset_15m">15 min</string>
-    <string name="preset_30m">30 min</string>
-    <string name="preset_1h">1 h</string>
-    <string name="preset_2h">2 h</string>
-    <string name="preset_4h">4 h</string>
-    <string name="custom_hint">Custom (minutes)</string>
-    <string name="btn_start">Start</string>
+    <string name="knob_hint">Turn the knob to set the time</string>
+    <string name="knob_min">%1$d min</string>
+    <string name="knob_h">%1$d h</string>
+    <string name="knob_h_min">%1$d h %2$d min</string>
+    <string name="btn_start_timer">Start timer</string>
 
     <string name="turn_on">Turn on</string>
     <string name="turn_off">Turn off</string>
 
     <string name="toast_need_access">Grant Do Not Disturb access first.</string>
-    <string name="toast_invalid_minutes">Enter 1 to 1440 minutes.</string>
     <string name="toast_tile_manual">Swipe down twice, tap the pencil icon and drag the Don\'t Disturb tile in.</string>
 </resources>

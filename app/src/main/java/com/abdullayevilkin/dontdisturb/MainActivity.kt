@@ -18,9 +18,8 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import com.google.android.material.button.MaterialButton
-import com.google.android.material.textfield.TextInputEditText
 
-/** Setup screen: grant access, add the tile, pick a timer, toggle DND. */
+/** Setup screen: grant access, add the tile, turn the knob to pick a timer, toggle DND. */
 class MainActivity : AppCompatActivity() {
 
     private lateinit var status: TextView
@@ -28,15 +27,12 @@ class MainActivity : AppCompatActivity() {
     private lateinit var btnNotif: MaterialButton
     private lateinit var btnExact: MaterialButton
     private lateinit var btnToggle: MaterialButton
-    private lateinit var etMinutes: TextInputEditText
+    private lateinit var knob: TimerKnobView
 
     private val notifPermission =
         registerForActivityResult(ActivityResultContracts.RequestPermission()) { render() }
 
-    private val presetIds = listOf(
-        R.id.preset5, R.id.preset15, R.id.preset30,
-        R.id.preset60, R.id.preset120, R.id.preset240
-    )
+    private val uiPrefs by lazy { getSharedPreferences("ui", MODE_PRIVATE) }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -53,7 +49,7 @@ class MainActivity : AppCompatActivity() {
         btnNotif = findViewById(R.id.btnNotif)
         btnExact = findViewById(R.id.btnExact)
         btnToggle = findViewById(R.id.btnToggle)
-        etMinutes = findViewById(R.id.etMinutes)
+        knob = findViewById(R.id.knob)
 
         btnAccess.setOnClickListener {
             startActivity(Intent(Settings.ACTION_NOTIFICATION_POLICY_ACCESS_SETTINGS))
@@ -75,19 +71,11 @@ class MainActivity : AppCompatActivity() {
         }
         findViewById<MaterialButton>(R.id.btnAddTile).setOnClickListener { requestAddTile() }
 
-        presetIds.forEach { id ->
-            findViewById<MaterialButton>(id).setOnClickListener { v ->
-                startTimer((v.tag as String).toInt())
-            }
-        }
+        knob.minutes = uiPrefs.getInt(KEY_LAST_MINUTES, 30)
+        knob.onChange = { uiPrefs.edit().putInt(KEY_LAST_MINUTES, it).apply() }
 
-        findViewById<MaterialButton>(R.id.btnStartCustom).setOnClickListener {
-            val minutes = etMinutes.text?.toString()?.trim()?.toIntOrNull()
-            if (minutes == null || minutes !in 1..1440) {
-                Toast.makeText(this, R.string.toast_invalid_minutes, Toast.LENGTH_SHORT).show()
-            } else {
-                startTimer(minutes)
-            }
+        findViewById<MaterialButton>(R.id.btnStartTimer).setOnClickListener {
+            startTimer(knob.minutes)
         }
 
         btnToggle.setOnClickListener {
@@ -150,5 +138,9 @@ class MainActivity : AppCompatActivity() {
         btnNotif.visibility = if (notificationsAllowed()) View.GONE else View.VISIBLE
         btnExact.visibility = if (DndManager.canScheduleExact(this)) View.GONE else View.VISIBLE
         btnToggle.setText(if (on) R.string.turn_off else R.string.turn_on)
+    }
+
+    private companion object {
+        const val KEY_LAST_MINUTES = "last_minutes"
     }
 }

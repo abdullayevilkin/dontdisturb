@@ -27,19 +27,15 @@
     <string name="btn_add_tile">Sürətli menyuya tile əlavə et</string>
 
     <string name="timer_section">Avtomatik söndürmə timeri</string>
-    <string name="preset_5m">5 dəq</string>
-    <string name="preset_15m">15 dəq</string>
-    <string name="preset_30m">30 dəq</string>
-    <string name="preset_1h">1 saat</string>
-    <string name="preset_2h">2 saat</string>
-    <string name="preset_4h">4 saat</string>
-    <string name="custom_hint">Özünüz seçin (dəqiqə)</string>
-    <string name="btn_start">Başla</string>
+    <string name="knob_hint">Vaxtı təyin etmək üçün düyməni fırladın</string>
+    <string name="knob_min">%1$d dəq</string>
+    <string name="knob_h">%1$d saat</string>
+    <string name="knob_h_min">%1$d saat %2$d dəq</string>
+    <string name="btn_start_timer">Timeri başlat</string>
 
     <string name="turn_on">Aktiv et</string>
     <string name="turn_off">Söndür</string>
 
     <string name="toast_need_access">Əvvəlcə \"Narahat etməyin\" icazəsini verin.</string>
-    <string name="toast_invalid_minutes">1 ilə 1440 arasında dəqiqə daxil edin.</string>
     <string name="toast_tile_manual">Yuxarıdan iki dəfə sürüşdürün, qələm işarəsinə toxunun və Narahat Etməyin tile-ını çəkib əlavə edin.</string>
 </resources>
