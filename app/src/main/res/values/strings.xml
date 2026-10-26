@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Don\'t Disturb</string>
+    <string name="tile_label">Don\'t Disturb</string>
+
+    <string name="tile_sub_no_access">Allow access</string>
+    <string name="tile_sub_on">On</string>
+    <string name="tile_sub_until">Until %1$s</string>
+    <string name="tile_sub_off">Off</string>
+
+    <string name="channel_name">Do Not Disturb status</string>
+    <string name="notif_title">Do Not Disturb is on</string>
+    <string name="notif_until">Turns off automatically at %1$s</string>
+    <string name="notif_pick_timer">Pick a timer to turn it off automatically</string>
+    <string name="action_15m">15 min</string>
+    <string name="action_1h">1 hour</string>
+    <string name="action_off">Turn off</string>
+
+    <string name="status_no_access">Do Not Disturb access has not been granted yet.</string>
+    <string name="status_on">Do Not Disturb is ON</string>
+    <string name="status_on_until">Do Not Disturb is ON until %1$s</string>
+    <string name="status_off">Do Not Disturb is OFF</string>
+
+    <string name="btn_access">1. Allow Do Not Disturb access</string>
+    <string name="btn_notifications">Allow notifications (for the timer controls)</string>
+    <string name="btn_exact_alarm">Allow exact alarms (precise auto-off)</string>
+    <string name="btn_add_tile">Add tile to Quick Settings</string>
+
+    <string name="timer_section">Auto-off timer</string>
+    <string name="preset_5m">5 min</string>
+    <string name="preset_15m">15 min</string>
+    <string name="preset_30m">30 min</string>
+    <string name="preset_1h">1 h</string>
+    <string name="preset_2h">2 h</string>
+    <string name="preset_4h">4 h</string>
+    <string name="custom_hint">Custom (minutes)</string>
+    <string name="btn_start">Start</string>
+
+    <string name="turn_on">Turn on</string>
+    <string name="turn_off">Turn off</string>
+
+    <string name="toast_need_access">Grant Do Not Disturb access first.</string>
+    <string name="toast_invalid_minutes">Enter 1 to 1440 minutes.</string>
+    <string name="toast_tile_manual">Swipe down twice, tap the pencil icon and drag the Don\'t Disturb tile in.</string>
+</resources>

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Narahat Etməyin</string>
+    <string name="tile_label">Narahat Etməyin</string>
+
+    <string name="tile_sub_no_access">İcazə verin</string>
+    <string name="tile_sub_on">Aktiv</string>
+    <string name="tile_sub_until">%1$s-dək</string>
+    <string name="tile_sub_off">Söndürülüb</string>
+
+    <string name="channel_name">Narahat etməyin statusu</string>
+    <string name="notif_title">Narahat etməyin aktivdir</string>
+    <string name="notif_until">%1$s-də avtomatik söndürüləcək</string>
+    <string name="notif_pick_timer">Avtomatik söndürmək üçün timer seçin</string>
+    <string name="action_15m">15 dəq</string>
+    <string name="action_1h">1 saat</string>
+    <string name="action_off">Söndür</string>
+
+    <string name="status_no_access">Narahat etməyin üçün icazə hələ verilməyib.</string>
+    <string name="status_on">Narahat etməyin AKTİVDİR</string>
+    <string name="status_on_until">Narahat etməyin %1$s-dək AKTİVDİR</string>
+    <string name="status_off">Narahat etməyin SÖNDÜRÜLÜB</string>
+
+    <string name="btn_access">1. \"Narahat etməyin\" icazəsini verin</string>
+    <string name="btn_notifications">Bildirişlərə icazə verin (timer düymələri üçün)</string>
+    <string name="btn_exact_alarm">Dəqiq siqnala icazə verin (dəqiq avtomatik söndürmə)</string>
+    <string name="btn_add_tile">Sürətli menyuya tile əlavə et</string>
+
+    <string name="timer_section">Avtomatik söndürmə timeri</string>
+    <string name="preset_5m">5 dəq</string>
+    <string name="preset_15m">15 dəq</string>
+    <string name="preset_30m">30 dəq</string>
+    <string name="preset_1h">1 saat</string>
+    <string name="preset_2h">2 saat</string>
+    <string name="preset_4h">4 saat</string>
+    <string name="custom_hint">Özünüz seçin (dəqiqə)</string>
+    <string name="btn_start">Başla</string>
+
+    <string name="turn_on">Aktiv et</string>
+    <string name="turn_off">Söndür</string>
+
+    <string name="toast_need_access">Əvvəlcə \"Narahat etməyin\" icazəsini verin.</string>
+    <string name="toast_invalid_minutes">1 ilə 1440 arasında dəqiqə daxil edin.</string>
+    <string name="toast_tile_manual">Yuxarıdan iki dəfə sürüşdürün, qələm işarəsinə toxunun və Narahat Etməyin tile-ını çəkib əlavə edin.</string>
+</resources>
